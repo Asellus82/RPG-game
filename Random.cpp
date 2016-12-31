@@ -9,32 +9,32 @@
 #include<random>
 
 Random::Random(){
-	Random::myResult = 0;
-	//std::srand(time);
+	myResult = 0;
+	std::srand(std::time(0));
 }
 
 int Random::getResult(){
-	return Random::myResult;
+	return myResult;
 }
 
 int Random::roll(){
-	Random::myResult = (std::rand() % 6) + (std::rand() % 6) + (std::rand() % 6) + 3;
+	myResult = (std::rand() % 6) + (std::rand() % 6) + (std::rand() % 6) + 3;
 
-	return Random::myResult;
+	return myResult;
 }
 
 int Random::roll(int dice){
-	Random::myResult = 0;
+	myResult = 0;
 	for (int i = 0; i < dice; i++)
-		Random::myResult += (std::rand() % 6) + 1;
-	return Random::myResult;
+		myResult += (std::rand() % 6) + 1;
+	return myResult;
 }
 
 int Random::roll(int dice, int mod){
-	Random::myResult = 0;
+	myResult = 0;
 	for (int i = 0; i < dice; i++)
-		Random::myResult += (std::rand() % 6) + 1;
-	Random::myResult += mod;
-	return Random::myResult;
+		myResult += (std::rand() % 6) + 1;
+	myResult += mod;
+	return myResult;
 }
 

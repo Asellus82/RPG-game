@@ -4,8 +4,8 @@
 int main(){
 
 	Random die;
-
-	std::cout << die.roll();
+	for (int i = 0; i < 10;i++)
+		std::cout << die.roll()<< std::endl;
 
 	return 0;
 }
